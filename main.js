@@ -7,6 +7,7 @@ const createMainWindow = () => {
     title: 'ImageShrink',
     width: 500,
     height: 600,
+    icon: './assets/icons/Icon_256x256.png',
   });
 
   mainWindow.loadFile('./app/index.html');
