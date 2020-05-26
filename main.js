@@ -23,8 +23,23 @@ const createMainWindow = () => {
 app.on('ready', () => {
   createMainWindow();
 
+  const mainMenu = Menu.buildFromTemplate(menu);
+  Menu.setApplicationMenu(mainMenu);
+
   mainWindow.on('closed', () => (mainWindow = null));
 });
+
+const menu = [
+  {
+    label: 'File',
+    submenu: [
+      {
+        label: 'Quit',
+        click: () => app.quit(),
+      },
+    ],
+  },
+];
 
 app.on('window-all-closed', () => {
   if (!isMac) {
