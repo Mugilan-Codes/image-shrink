@@ -20,15 +20,6 @@ const createMainWindow = () => {
   mainWindow.loadFile('./app/index.html');
 };
 
-app.on('ready', () => {
-  createMainWindow();
-
-  const mainMenu = Menu.buildFromTemplate(menu);
-  Menu.setApplicationMenu(mainMenu);
-
-  mainWindow.on('closed', () => (mainWindow = null));
-});
-
 const menu = [
   {
     label: 'File',
@@ -40,6 +31,19 @@ const menu = [
     ],
   },
 ];
+
+if (isMac) {
+  menu.unshift({ role: 'appMenu' });
+}
+
+app.on('ready', () => {
+  createMainWindow();
+
+  const mainMenu = Menu.buildFromTemplate(menu);
+  Menu.setApplicationMenu(mainMenu);
+
+  mainWindow.on('closed', () => (mainWindow = null));
+});
 
 app.on('window-all-closed', () => {
   if (!isMac) {
