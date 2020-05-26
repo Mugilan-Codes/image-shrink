@@ -14,7 +14,7 @@ const createMainWindow = () => {
     width: 500,
     height: 600,
     icon: './assets/icons/Icon_256x256.png',
-    resizable: false,
+    resizable: isDev,
   });
 
   mainWindow.loadFile('./app/index.html');
