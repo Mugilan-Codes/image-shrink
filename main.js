@@ -21,6 +21,7 @@ const createMainWindow = () => {
 };
 
 const menu = [
+  ...(isMac ? [{ role: 'appMenu' }] : []),
   {
     label: 'File',
     submenu: [
@@ -31,10 +32,6 @@ const menu = [
     ],
   },
 ];
-
-if (isMac) {
-  menu.unshift({ role: 'appMenu' });
-}
 
 app.on('ready', () => {
   createMainWindow();
