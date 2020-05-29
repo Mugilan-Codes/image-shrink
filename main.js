@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, globalShortcut } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 
 // SET ENVIRONMENT
 process.env.NODE_ENV = 'development';
@@ -7,6 +7,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 const isMac = process.platform === 'darwin';
 
 let mainWindow;
+let aboutWindow;
 
 const createMainWindow = () => {
   mainWindow = new BrowserWindow({
@@ -19,6 +20,19 @@ const createMainWindow = () => {
   });
 
   mainWindow.loadFile('./app/index.html');
+};
+
+const createAboutWindow = () => {
+  aboutWindow = new BrowserWindow({
+    title: 'About ImageShrink',
+    width: 300,
+    height: 300,
+    icon: './assets/icons/Icon_256x256.png',
+    resizable: false,
+    backgroundColor: '#ffffff',
+  });
+
+  aboutWindow.loadFile('./app/about.html');
 };
 
 const menu = [
@@ -44,11 +58,6 @@ app.on('ready', () => {
 
   const mainMenu = Menu.buildFromTemplate(menu);
   Menu.setApplicationMenu(mainMenu);
-
-  globalShortcut.register('CmdOrCtrl+R', () => mainWindow.reload());
-  globalShortcut.register(isMac ? 'Command+Alt+I' : 'Control+Shift+I', () =>
-    mainWindow.toggleDevTools()
-  );
 
   mainWindow.on('closed', () => (mainWindow = null));
 });
