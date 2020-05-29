@@ -24,14 +24,7 @@ const createMainWindow = () => {
 const menu = [
   ...(isMac ? [{ role: 'appMenu' }] : []),
   {
-    label: 'File',
-    submenu: [
-      {
-        label: 'Quit',
-        accelerator: 'CmdOrCtrl+W',
-        click: () => app.quit(),
-      },
-    ],
+    role: 'fileMenu',
   },
 ];
 
