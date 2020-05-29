@@ -27,7 +27,7 @@ const menu = [
     submenu: [
       {
         label: 'Quit',
-        accelerator: isMac ? 'Command+w' : 'Ctrl+w',
+        accelerator: 'CmdOrCtrl+w',
         click: () => app.quit(),
       },
     ],
