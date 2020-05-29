@@ -23,9 +23,20 @@ const createMainWindow = () => {
 
 const menu = [
   ...(isMac ? [{ role: 'appMenu' }] : []),
-  {
-    role: 'fileMenu',
-  },
+  { role: 'fileMenu' },
+  ...(isDev
+    ? [
+        {
+          label: 'Developer',
+          submenu: [
+            { role: 'reload' },
+            { role: 'forcereload' },
+            { type: 'separator' },
+            { role: 'toggledevtools' },
+          ],
+        },
+      ]
+    : []),
 ];
 
 app.on('ready', () => {
