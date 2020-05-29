@@ -14,7 +14,7 @@ const createMainWindow = () => {
     title: 'ImageShrink',
     width: 500,
     height: 600,
-    icon: './assets/icons/Icon_256x256.png',
+    icon: `${__dirname}/assets/icons/Icon_256x256.png`,
     resizable: isDev,
     backgroundColor: '#ffffff',
   });
@@ -27,7 +27,7 @@ const createAboutWindow = () => {
     title: 'About ImageShrink',
     width: 300,
     height: 300,
-    icon: './assets/icons/Icon_256x256.png',
+    icon: `${__dirname}/assets/icons/Icon_256x256.png`,
     resizable: false,
     backgroundColor: '#ffffff',
   });
@@ -36,8 +36,33 @@ const createAboutWindow = () => {
 };
 
 const menu = [
-  ...(isMac ? [{ role: 'appMenu' }] : []),
+  ...(isMac
+    ? [
+        {
+          label: app.name,
+          submenu: [
+            {
+              label: 'About',
+              click: createAboutWindow,
+            },
+          ],
+        },
+      ]
+    : []),
   { role: 'fileMenu' },
+  ...(!isMac
+    ? [
+        {
+          label: 'Help',
+          submenu: [
+            {
+              label: 'About',
+              click: createAboutWindow,
+            },
+          ],
+        },
+      ]
+    : []),
   ...(isDev
     ? [
         {
