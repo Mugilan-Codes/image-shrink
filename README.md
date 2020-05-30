@@ -1,5 +1,7 @@
 # Image Shrink
 
+[![time tracker](https://wakatime.com/badge/github/Mugilan-Codes/image-shrink.svg)](https://wakatime.com/badge/github/Mugilan-Codes/image-shrink)
+
 ## TODO
 
 - Let User choose their own output path
