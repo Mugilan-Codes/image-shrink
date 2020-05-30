@@ -1,5 +1,6 @@
 const path = require('path');
 const os = require('os');
+const { ipcRenderer } = require('electron');
 
 const form = document.getElementById('image-form');
 const img = document.getElementById('img');
@@ -14,5 +15,5 @@ form.addEventListener('submit', (e) => {
   const imgPath = img.files[0].path;
   const imgQuality = slider.value;
 
-  console.log(imgPath, imgQuality);
+  ipcRenderer.send('image:minimize', { imgPath, imgQuality });
 });
