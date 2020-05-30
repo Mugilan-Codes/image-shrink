@@ -17,6 +17,9 @@ const createMainWindow = () => {
     icon: `${__dirname}/assets/icons/Icon_256x256.png`,
     resizable: isDev,
     backgroundColor: '#ffffff',
+    webPreferences: {
+      nodeIntegration: true,
+    },
   });
 
   mainWindow.loadFile('./app/index.html');
