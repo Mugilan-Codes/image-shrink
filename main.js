@@ -12,7 +12,7 @@ let aboutWindow;
 const createMainWindow = () => {
   mainWindow = new BrowserWindow({
     title: 'ImageShrink',
-    width: 500,
+    width: isDev ? 800 : 500,
     height: 600,
     icon: `${__dirname}/assets/icons/Icon_256x256.png`,
     resizable: isDev,
@@ -21,6 +21,8 @@ const createMainWindow = () => {
       nodeIntegration: true,
     },
   });
+
+  isDev && mainWindow.webContents.openDevTools();
 
   mainWindow.loadFile('./app/index.html');
 };
