@@ -1,5 +1,9 @@
 # Image Shrink
 
+## TODO
+
+- Let User choose their own output path
+
 ## Resources
 
 - [Electron JS](https://www.electronjs.org/)
