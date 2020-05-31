@@ -6,6 +6,8 @@
 
 - Let User choose their own output path
 - Send Data from IPCMain to IPCRenderer
+- Rename the file
+- Replace or Keep a copy option
 
 ## Packages Used
 
