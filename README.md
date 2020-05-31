@@ -53,6 +53,10 @@ npm run package-linux
 - Replace or Keep a copy option
 - Create Constants for Values such as Prod and Dev
 - Distribute the App
+- Refactor Code
+- Add More Styles
+- Automatic Version Bump
+- Dynamic App Name and Version view in About and Index
 
 ## Packages Used
 
