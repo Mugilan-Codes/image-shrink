@@ -9,12 +9,12 @@
 
 ## Packages Used
 
-> DevDependencies
+> DevDependencies (npm i -D \<package-name>)
 
 - [Electron](https://www.npmjs.com/package/electron)
 - [Nodemon](https://www.npmjs.com/package/nodemon)
 
-> Dependecies
+> Dependecies (npm i \<package-name>)
 
 - [Imagemin](https://www.npmjs.com/package/imagemin)
 - [JPEG Plugin](https://www.npmjs.com/package/imagemin-mozjpeg)
