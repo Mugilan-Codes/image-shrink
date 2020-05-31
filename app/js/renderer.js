@@ -13,7 +13,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const imgPath = img.files[0].path;
-  const imgQuality = slider.value;
+  const quality = slider.value;
 
-  ipcRenderer.send('image:minimize', { imgPath, imgQuality });
+  ipcRenderer.send('image:minimize', { imgPath, quality });
 });
