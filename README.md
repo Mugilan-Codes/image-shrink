@@ -16,6 +16,7 @@
 
 - [Electron](https://www.npmjs.com/package/electron)
 - [Nodemon](https://www.npmjs.com/package/nodemon)
+- [Packager](https://www.npmjs.com/package/electron-packager)
 
 > Dependecies (npm i \<package-name>)
 
@@ -32,3 +33,4 @@
 - [Brad's ImageShrink App](https://github.com/bradtraversy/electron-course-files/tree/master/image-shrink)
 - [Materialize CSS](https://materializecss.com/)
 - [Font Awesome](https://fontawesome.com/)
+- [Electron Packager](https://www.christianengvall.se/electron-packager-tutorial/)
