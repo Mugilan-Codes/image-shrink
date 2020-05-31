@@ -5,6 +5,7 @@
 ## TODO
 
 - Let User choose their own output path
+- Send Data from IPCMain to IPCRenderer
 
 ## Packages Used
 
