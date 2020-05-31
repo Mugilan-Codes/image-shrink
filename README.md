@@ -6,6 +6,20 @@
 
 - Let User choose their own output path
 
+## Packages Used
+
+> DevDependencies
+
+- [Electron](https://www.npmjs.com/package/electron)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+
+> Dependecies
+
+- [Imagemin](https://www.npmjs.com/package/imagemin)
+- [JPEG Plugin](https://www.npmjs.com/package/imagemin-mozjpeg)
+- [PNG Plugin](https://www.npmjs.com/package/imagemin-pngquant)
+- [Slash](https://www.npmjs.com/package/slash)
+
 ## Resources
 
 - [Electron JS](https://www.electronjs.org/)
