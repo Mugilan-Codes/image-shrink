@@ -8,6 +8,7 @@
 - Send Data from IPCMain to IPCRenderer
 - Rename the file
 - Replace or Keep a copy option
+- Create Constants for Values such as Prod and Dev
 
 ## Packages Used
 
@@ -22,6 +23,7 @@
 - [JPEG Plugin](https://www.npmjs.com/package/imagemin-mozjpeg)
 - [PNG Plugin](https://www.npmjs.com/package/imagemin-pngquant)
 - [Slash](https://www.npmjs.com/package/slash)
+- [Logger](https://www.npmjs.com/package/electron-log)
 
 ## Resources
 
