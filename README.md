@@ -1,6 +1,49 @@
 # Image Shrink
 
+A desktop app built on Electron for minimizing images
+
 [![time tracker](https://wakatime.com/badge/github/Mugilan-Codes/image-shrink.svg)](https://wakatime.com/badge/github/Mugilan-Codes/image-shrink)
+
+## Usage
+
+### Modify main.js for Development Mode
+
+```
+process.env.NODE_ENV = 'development';
+```
+
+### Install Dependencies
+
+```
+npm install
+```
+
+### Run
+
+```
+npm start
+npm run dev (with Nodemon)
+```
+
+### Modify main.js to Production Mode before Packaging
+
+```
+process.env.NODE_ENV = 'production';
+```
+
+### Package
+
+```
+npm run package-mac
+npm run package-win
+npm run package-linux
+```
+
+## Logs
+
+- macOS: ~/Library/Logs/imageshrink/main.log
+- Windows: %USERPROFILE%\AppData\Roaming\imageshrink\logs\main.log
+- Linux: ~/.config/imageshrink/logs/main.log
 
 ## TODO
 
@@ -9,6 +52,7 @@
 - Rename the file
 - Replace or Keep a copy option
 - Create Constants for Values such as Prod and Dev
+- Distribute the App
 
 ## Packages Used
 
